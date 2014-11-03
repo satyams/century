@@ -7,3 +7,5 @@ browser.goto 'http://www.meadowbrook.com/century/'
 browser.link(:text => 'Report a Claim').click
 sleep 5
 browser.link(:text => 'Liability Claim Form').click
+sleep 5
+browser.text_field(:id => 'txtAgentName').set('Brian')
