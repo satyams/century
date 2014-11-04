@@ -2,9 +2,9 @@ module Remarks
 
   include PageObject
 
-  text_field(:remarks_field, id: 'txtRemarks')
-  text_field(:reported_by_field, id: 'txtReportedBy')
-  radio_button(:lawsuit_yes_radio_button, id: 'rdoLawsuitFiled_0')
-  radio_button(:lawsuit_no_radio_button, id: 'rdoLawsuitFiled_1')
+  text_field(:remarks, id: 'txtRemarks')
+  text_field(:reported_by, id: 'txtReportedBy')
+  radio_button(:lawsuit_yes, id: 'rdoLawsuitFiled_0')
+  radio_button(:lawsuit_no, id: 'rdoLawsuitFiled_1')
 
 end

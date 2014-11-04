@@ -6,3 +6,76 @@ liability_claim:
     agent_city: Columbus
     agent_state: OH
     agent_zip: 43219
+
+  insured_information:
+    insured_name: Brian Smith
+    insured_city: Columbus
+    insured_state: OH
+    insured_zip: 43017
+    insured_contact_person: Brian Smith
+    insured_contact_address: %6 Cleveland Avenue
+    insured_contact_city: Columbus
+    insured_contact_state: OH
+    insured_contact_zip: 43230
+    insured_contact_primary_phone: 6141113333
+    insured_when_to_contact: 10AM
+    insured_contact_secondary_phone: 6141114444
+    insured_where_to_contact: Columbus
+
+  policy_information:
+    policy_company: Century Insurance
+    policy_type: Occurrence
+    policy_effective_date: 01-02-2013
+    policy_expiration_date: 01-02-2015
+    policy_number: 111222333
+    policy_coverage_part: trunk
+    policy_general_aggregate: 100000
+    policy_prod_comp: 3000000
+    policy_pers_inj: 4000000
+    policy_medical_expense: 5000
+    policy_fire_damage: 20000
+    policy_umbrella: Umbrella
+    policy_excess_carrier: 50000
+    policy_each_occurrence: Full
+    policy_deductible: 500
+    policy_aggr: 200000
+    policy_per_claim: 250000
+    policy_per_occ: 250000
+
+  claim_information:
+    claim_date_of_loss: 11-01-2014
+    claim_location_of_loss: Columbus
+    claim_authorities_notified: Yes
+    claim_whom: Claim Analyst
+    claim_accident_description: roof damage
+    premise_claim: something
+    claim_specify_other: mailbox damage
+    claim_type_of_premises: house
+    claim_owners_name: Brian Smith
+    claim_owners_phone: 6141113333
+    claim_owners_address: 56 Cleveland Avenue
+    claim_owners_city: Columbus
+    claim_owners_state: OH
+    claim_owners_zip: 43215
+    products_claim: manufacturer
+    claim_other_products: owner
+    claim_where_can_product: Columbus
+
+  claimant_information:
+    claimant_name: Brian Smith
+    claimant_phone: 6145553333
+    claimant_address: 57 Cleveland Avenue
+    claimant_city: Columbus
+    claimant_state: OH
+    claimant_zip: 43230
+    claimant_age: 45
+    claimant_sex: M
+    claimant_occupation: IT professional
+    claimant_employer_name: Sogeti
+    claimant_employer_phone: 6141119999
+    claimant_employer_address: 567 Cleveland Avenue
+    claimant_employer_city: Columbus
+    claimant_employer_state: OH
+    claimant_employer_zip: 43215
+    claimant_describe_injury: Broken Ankle
+    claimant_hospital: Methodist Hospital
