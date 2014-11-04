@@ -10,7 +10,10 @@ end
 
 When(/^I submit a proper "([^"]*)" claim form$/) do |claim_type|
   test_data = read_yaml("#{claim_type}_claim.yml")
-  on(RegisterClaimPage).fill_out_form_with(test_data)
+  @browser.windows.last.use do
+    on(LiabilityClaimPage).fill_out_form_with(test_data)
+  end
+  sleep 5
   #We will ignore the submit for now
 end
 

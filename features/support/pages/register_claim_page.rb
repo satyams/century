@@ -9,7 +9,4 @@ class RegisterClaimPage
   link(:liability_claim_form, text: 'Liability Claim Form')
   link(:property_claim_form, text: 'Property Claim Form')
 
-  def fill_out_form_with(data)
-    puts data.inspect
-  end
 end
