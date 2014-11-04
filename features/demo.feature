@@ -1,1 +1,3 @@
-#will write feature file here.
+  Feature: Demo
+    Scenario: Demo
+      Given I am on the home page
