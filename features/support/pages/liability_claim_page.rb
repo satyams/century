@@ -1,7 +1,13 @@
+require_relative '../common/quick_links'
+require_relative '../common/navigation_links'
+
 class LiabilityClaimPage
+  include PageObject
+  include QuickLinks
+  include NavigationLinks
 
   #Agent information
-  text_field(:agent_name_field, :id => 'txtAgentName')
+  text_field(:agent_name_field, id: 'txtAgentName')
   text_field(:agent_phone_number_field, :id => 'txtAgentPhone')
   text_field(:agent_address_field, :id => 'txtAgentAddress')
   text_field(:agent_city_field, :id => 'txtAgentCity')
@@ -34,10 +40,6 @@ class LiabilityClaimPage
   text_field(:policy_general_aggregate_field, :id => 'txtGeneralAggregate')
   text_field(:policy_prod_comp_field, :id => 'txtProdComp')
   text_field(:policy_pers_inj_field, :id => 'txtPersInj')
-
-
-
-
 
 
 end
