@@ -1,0 +1,8 @@
+liability_claim:
+  agent_information:
+    name: John Smith
+    phone_number: 614-625-4453
+    address: 100 Main St.
+    city: Columbus
+    state: OH
+    zip: 43219
