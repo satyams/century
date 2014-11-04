@@ -1,5 +1,4 @@
 module WitnessInformation
-
   include PageObject
 
   text_field(:witness_name_field, id: 'txtWitnessName1')

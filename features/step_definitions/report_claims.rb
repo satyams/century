@@ -13,7 +13,7 @@ When(/^I submit a proper "([^"]*)" claim form$/) do |claim_type|
   @browser.windows.last.use do
     on(LiabilityClaimPage).fill_out_form_with(test_data)
   end
-  sleep 5
+  sleep 2
   #We will ignore the submit for now
 end
 

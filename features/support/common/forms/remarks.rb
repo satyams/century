@@ -1,5 +1,4 @@
 module Remarks
-
   include PageObject
 
   text_field(:remarks_field, id: 'txtRemarks')
