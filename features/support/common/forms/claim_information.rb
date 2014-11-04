@@ -1,6 +1,6 @@
 module ClaimInformation
 
-  inlcude PageObject
+  include PageObject
 
   text_field(:claim_date_of_loss_field, id: 'txtDateofLoss')
   text_field(:claim_location_of_loss_field, id: 'txtLocationofLoss')

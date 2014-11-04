@@ -1,6 +1,6 @@
 module PolicyInformation
 
-  inlclude PageObject
+  include PageObject
 
   text_field(:policy_company_field, id: 'txtCompany')
   select_list(:policy_type_list, id: 'ddPolicyType')
