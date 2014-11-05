@@ -18,6 +18,7 @@ end
 
 After do |scenario|
   if scenario.failed?
+    take_screenshot(scenario, @browser)
     close_all_windows_except_main(@browser)
   end
 end

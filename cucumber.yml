@@ -1,2 +1,2 @@
-default: --no-source --color --format pretty
+default: --no-source --color --format pretty -f html --out ./features/results/report.html
 benchmark: --no-source --color --format pretty BENCHMARK=true
