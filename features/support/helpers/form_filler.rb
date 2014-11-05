@@ -19,7 +19,15 @@ module FormFiller
     file.each_key do |claim_type|
       file[claim_type].each_key do |area|
         file[claim_type][area].each do |key, value|
-          eval("self.#{key}='#{value}'")
+          begin
+            if eval("#{key}_element.class") == PageObject::Elements::RadioButton
+              eval("self.select_#{key}") if value.downcase == 'select'
+            else
+              eval("self.#{key}='#{value}'")
+            end
+          rescue Exception => e
+            fail("Failed to enter [#{value}] at [#{key}] field. Exception: #{e.class}")
+          end
         end
       end
     end

@@ -42,10 +42,10 @@ liability_claim:
   claim_information:
     claim_date_of_loss: 11-01-2014
     claim_location_of_loss: Columbus
-    claim_authorities_notified: Yes
+    claim_authorities_notified: 'Yes'
     claim_whom: Claim Analyst
     claim_accident_description: roof damage
-    premise_claim: something
+    premise_claim: Other
     claim_specify_other: mailbox damage
     claim_type_of_premises: house
     claim_owners_name: Brian Smith
@@ -54,8 +54,8 @@ liability_claim:
     claim_owners_city: Columbus
     claim_owners_state: OH
     claim_owners_zip: 43215
-    products_claim: manufacturer
-    claim_other_products: owner
+    products_claim: Other
+    claim_other_products: Unsure
     claim_where_can_product: Columbus
   claimant_information:
     claimant_name: Brian Smith
@@ -75,3 +75,22 @@ liability_claim:
     claimant_employer_zip: 43215
     claimant_describe_injury: Broken Ankle
     claimant_hospital: Methodist Hospital
+  witness_information:
+      witness_name_1: Michael Brown
+      witness_primary_phone_1: 408-453-7681
+      witness_secondary_phone_1: ~
+      witness_address_1: 574 Circle St.
+      witness_city_1: Columbus
+      witness_state_1: OH
+      witness_zip_1: 43216
+      witness_name_2: ~
+      witness_primary_phone_2: ~
+      witness_secondary_phone_2: ~
+      witness_address_2: ~
+      witness_city_2: ~
+      witness_state_2: ~
+      witness_zip_2: ~
+  remarks:
+    remarks: Automation Test
+    reported_by: Sogeti
+    lawsuit_no: Select
