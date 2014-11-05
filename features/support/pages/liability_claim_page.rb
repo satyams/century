@@ -8,6 +8,13 @@ class LiabilityClaimPage
   include NavigationLinks
   include FormFiller
 
+  TITLE = 'CI Group - Report a Claim'
+
   button(:liability_submit_button, id: 'btnSubmit')
+  select_list(:claim_authorities_notified, id: 'ddAuthoritiesNotified')
+
+  def close
+    @browser.window(title: TITLE).close
+  end
 
 end

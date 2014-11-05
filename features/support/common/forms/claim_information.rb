@@ -4,7 +4,7 @@ module ClaimInformation
 
   text_field(:claim_date_of_loss, id: 'txtDateofLoss')
   text_field(:claim_location_of_loss, id: 'txtLocationofLoss')
-  select_list(:claim_authorities_notified, id: 'ddAuthoritiesNotified')
+  # select_list(:claim_authorities_notified, id: 'ddAuthoritiesNotified')#not the same for property
   text_field(:claim_whom, id: 'txtWhom')
   text_field(:claim_accident_description, id: 'txtAccidentDescription')
   select_list(:premise_claim, id: 'ddPremiseClaim')

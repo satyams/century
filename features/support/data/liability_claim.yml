@@ -8,6 +8,7 @@ liability_claim:
     agent_zip: 43219
   insured_information:
     insured_name: Brian Smith
+    insured_address: 12 Dublin Dr
     insured_city: Columbus
     insured_state: OH
     insured_zip: 43017

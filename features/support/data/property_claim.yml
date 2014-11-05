@@ -1,0 +1,56 @@
+property_claim:
+  agent_information:
+    agent_name: John Smith
+    agent_phone_number: 614-625-4453
+    agent_address: 100 Main St.
+    agent_city: Columbus
+    agent_state: OH
+    agent_zip: 43219
+  insured_information:
+    insured_name: Brian Smith
+    insured_address: 12 Dublin Dr
+    insured_city: Columbus
+    insured_state: OH
+    insured_zip: 43017
+    insured_contact_person: Brian Smith
+    insured_contact_address: 6 Cleveland Avenue
+    insured_contact_city: Columbus
+    insured_contact_state: OH
+    insured_contact_zip: 43230
+    insured_contact_primary_phone: 6141113333
+    insured_when_to_contact: 10AM
+    insured_contact_secondary_phone: 6141114444
+    insured_where_to_contact: Columbus
+  policy_information:
+    policy_effective_date: 01-02-2013
+    policy_expiration_date: 01-02-2015
+    policy_number: 111222333
+  claim_information:
+    claim_date_of_loss: 11-01-2014
+    claim_location_of_loss: Columbus
+    authorities_notified_yes: Select
+    claim_whom: Claim Analyst
+    description_of_loss: roof damage
+    kind_of_loss: Other
+    other_kind_of_loss: NA
+  claimant_information:
+    claimant_name: Brian Smith
+    claimant_phone: 6145553333
+    claimant_address: 57 Cleveland Avenue
+    claimant_city: Columbus
+    claimant_state: OH
+    claimant_zip: 43230
+    claimant_age: 45
+    claimant_sex: M
+    claimant_occupation: IT professional
+    claimant_employer_name: Sogeti
+    claimant_employer_phone: 6141119999
+    claimant_employer_address: 567 Cleveland Avenue
+    claimant_employer_city: Columbus
+    claimant_employer_state: OH
+    claimant_employer_zip: 43215
+    describe_injury_or_property_damage: Broken Ankle
+    claimant_hospital: Methodist Hospital
+  remarks:
+    remarks: Automation Test
+    reported_by: Sogeti
