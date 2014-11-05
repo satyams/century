@@ -77,20 +77,20 @@ liability_claim:
     claimant_describe_injury: Broken Ankle
     claimant_hospital: Methodist Hospital
   witness_information:
-      witness_name_1: Michael Brown
-      witness_primary_phone_1: 408-453-7681
-      witness_secondary_phone_1: ~
-      witness_address_1: 574 Circle St.
-      witness_city_1: Columbus
-      witness_state_1: OH
-      witness_zip_1: 43216
-      witness_name_2: ~
-      witness_primary_phone_2: ~
-      witness_secondary_phone_2: ~
-      witness_address_2: ~
-      witness_city_2: ~
-      witness_state_2: ~
-      witness_zip_2: ~
+    witness_name_1: Michael Brown
+    witness_primary_phone_1: 408-453-7681
+    witness_secondary_phone_1: ~
+    witness_address_1: 574 Circle St.
+    witness_city_1: Columbus
+    witness_state_1: OH
+    witness_zip_1: 43216
+    witness_name_2: ~
+    witness_primary_phone_2: ~
+    witness_secondary_phone_2: ~
+    witness_address_2: ~
+    witness_city_2: ~
+    witness_state_2: ~
+    witness_zip_2: ~
   remarks:
     remarks: Automation Test
     reported_by: Sogeti
