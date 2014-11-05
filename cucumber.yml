@@ -1,2 +1,2 @@
 default: --no-source --color --format pretty
-benchmark: --no-source --color --format pretty
+benchmark: --no-source --color --format pretty BENCHMARK=true

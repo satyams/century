@@ -29,12 +29,15 @@ end
 
 def benchmark_runs(scenario, proc)
   if ENV['BENCHMARK']
-    time = Benchmark.measure do
-      proc.call
-    end
+    stime = Time.now
+    # time = Benchmark.measure do
+       proc.call
+    # end
+    etime = Time.now
+    total = etime - stime
     puts '-----------------------------------------'
     puts "Scenario: #{scenario.name}"
-    puts "Duration: #{time.total.round(2)} seconds"
+    puts "Duration: #{total.round(2)} seconds"
     puts '-----------------------------------------'
   else
     proc.call
