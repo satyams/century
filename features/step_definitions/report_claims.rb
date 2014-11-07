@@ -14,7 +14,6 @@ end
 
 When(/^I submit a proper "([^"]*)" claim form$/) do |claim_type|
   test_data = read_yaml("#{claim_type}_claim.yml")
-  sleep 2.5
 
   on_new_window do
     type = claim_type.to_s.titleize.gsub(' ','')

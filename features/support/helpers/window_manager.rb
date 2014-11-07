@@ -1,6 +1,7 @@
 module WindowManager
   def on_new_window(&block)
     @browser.windows.last.use do
+      @browser.window.maximize
       yield block
     end
   end
