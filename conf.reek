@@ -1,0 +1,19 @@
+TooManyStatements:
+  enabled: true
+  exclude:
+  - initialize
+  max_statements: 10
+UtilityFunction:
+  enabled: true
+  exclude: ['read_yaml']
+  max_helper_calls: 1
+DuplicateMethodCall:
+  enabled: true
+  exclude: ['benchmark_runs']
+  max_calls: 1
+  allow_calls: []
+NestedIterators:
+  enabled: true
+  exclude: ['fill_out_form_with']
+  max_allowed_nesting: 1
+  ignore_iterators: []

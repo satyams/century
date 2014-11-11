@@ -8,28 +8,37 @@ module WindowManager
 
   def close_all_windows(browser)
     window = nil
+    browser_windows = browser.windows
     begin
-      browser.windows.size.downto(1) do |idx|
+      # browser.windows.size.downto(1) do |idx|
+      browser_windows.size.downto(1) do |idx|
         window = idx
-        browser.windows[idx - 1].close unless idx==1
-        browser.close if idx==1
+        # browser.windows[idx - 1].close unless idx==1
+        # browser.close if idx==1
+        if idx == 1
+          browser.close
+        else
+          # browser.windows[idx -  1].close
+          browser_windows[idx - 1].close
+        end
       end
-    rescue Exception => e
+    rescue Exception => error
       warn "Error deleting window # #{window}"
-      warn e.message.to_s
+      warn error.message.to_s
     end
   end
 
   def close_all_windows_except_main(browser)
     window = nil
+    browser_windows = browser.windows
     begin
-      browser.windows.size.downto(2) do |idx|
+      browser_windows.size.downto(2) do |idx|
         window = idx
-        browser.windows[idx - 1].close unless idx==1
+        browser_windows[idx - 1].close unless idx==1
       end
-    rescue Exception => e
+    rescue Exception => error
       warn "Error deleting window # #{window}"
-      warn e.message.to_s
+      warn error.message.to_s
     end
   end
 

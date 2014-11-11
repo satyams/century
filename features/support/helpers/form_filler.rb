@@ -16,27 +16,32 @@ module FormFiller
   include WitnessInformation
 
   def fill_out_form_with(file)
-    first_element ||= nil
+    first_element = false
     file.each_key do |claim_type|
-      file[claim_type].each_key do |area|
-        file[claim_type][area].each do |key, value|
-          #wait until first element is visible
-          if first_element.nil?
+      claim = file[claim_type]
+      claim.each_key do |area|
+        claim[area].each do |key, value|
+          unless first_element
             first_element = eval("self.#{key}_element.wait_until(timeout=5, '#{key} not visible.'){self.#{key}_element.visible?}")
           end
-          begin
-            unless value.nil?
-              if eval("#{key}_element.class") == PageObject::Elements::RadioButton
-                eval("self.select_#{key}") if value.downcase == 'select'
-              else
-                eval("self.#{key}='#{value}'")
-              end
-            end
-          rescue Exception => e
-            fail("Failed to enter [#{value}] at [#{key}] field. Exception: #{e.class}")
-          end
+          enter_value(key, value)
         end
       end
+    end
+  end
+
+  private
+  def enter_value(key, value)
+    begin
+      if value
+        if eval("#{key}_element.class") == PageObject::Elements::RadioButton
+          eval("self.select_#{key}") if value.downcase == 'select'
+        else
+          eval("self.#{key}='#{value}'")
+        end
+      end
+    rescue Exception => error
+      fail("Failed to enter [#{value}] at [#{key}] field. Exception: #{error.class}")
     end
   end
 end

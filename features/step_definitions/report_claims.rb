@@ -16,9 +16,9 @@ When(/^I submit a proper "([^"]*)" claim form$/) do |claim_type|
   test_data = read_yaml("#{claim_type}_claim.yml")
 
   on_new_window do
-    type = claim_type.to_s.titleize.gsub(' ','')
-      on("#{type}ClaimPage") do |page|
-       page.fill_out_form_with(test_data)
+    type = claim_type.to_s.titleize.gsub(' ', '')
+    on("#{type}ClaimPage") do |page|
+      page.fill_out_form_with(test_data)
       #Ignore submit. Close window instead.
       page.close
     end

@@ -1,3 +1,4 @@
+#Century Home Page
 require_relative '../common/quick_links'
 require_relative '../common/navigation_links'
 
