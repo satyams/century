@@ -1,7 +1,7 @@
-#Register Claim Page
 require_relative '../common/quick_links'
 require_relative '../common/navigation_links'
 
+# Register Claim Page
 class RegisterClaimPage
   include PageObject
   include QuickLinks
@@ -9,5 +9,4 @@ class RegisterClaimPage
 
   link(:liability_claim_form, text: 'Liability Claim Form')
   link(:property_claim_form, text: 'Property Claim Form')
-
 end

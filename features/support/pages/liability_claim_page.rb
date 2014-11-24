@@ -1,8 +1,8 @@
-#Liability Claim Page
 require_relative '../common/quick_links'
 require_relative '../common/navigation_links'
 require_relative '../helpers/form_filler'
 
+# Liability Claim Page
 class LiabilityClaimPage
   include PageObject
   include QuickLinks
@@ -17,5 +17,4 @@ class LiabilityClaimPage
   def close
     @browser.window(title: TITLE).close
   end
-
 end

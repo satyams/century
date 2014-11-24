@@ -1,3 +1,4 @@
+# Fields to be populated on Agent Information section
 module AgentInformation
   include PageObject
 
@@ -7,5 +8,4 @@ module AgentInformation
   text_field(:agent_city, id: 'txtAgentCity')
   text_field(:agent_state, id: 'txtAgentState')
   text_field(:agent_zip, id: 'txtAgentZip')
-
 end

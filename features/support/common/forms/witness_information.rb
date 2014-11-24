@@ -1,3 +1,4 @@
+# Fields to be populated on Witness Information section
 module WitnessInformation
   include PageObject
 
@@ -15,5 +16,4 @@ module WitnessInformation
   text_field(:witness_city_2, id: 'txtWitnessCity2')
   text_field(:witness_state_2, id: 'txtWitnessState2')
   text_field(:witness_zip_2, id: 'txtWitnessZip2')
-
 end

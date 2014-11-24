@@ -1,7 +1,7 @@
-#Century Home Page
 require_relative '../common/quick_links'
 require_relative '../common/navigation_links'
 
+# Century Home Page
 class CenturyHomePage
   include PageObject
   include QuickLinks

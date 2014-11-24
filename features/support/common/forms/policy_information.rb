@@ -1,5 +1,5 @@
+# Fields to be populated on Policy Information section
 module PolicyInformation
-
   include PageObject
 
   text_field(:policy_company, id: 'txtCompany')
@@ -20,5 +20,4 @@ module PolicyInformation
   text_field(:policy_aggr, id: 'txtAggr')
   text_field(:policy_per_claim, id: 'txtPerClaim')
   text_field(:policy_per_occ, id: 'txtPerOcc')
-
 end

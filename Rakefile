@@ -36,7 +36,7 @@ task :reek do
 end
 
 RuboCop::RakeTask.new(:rubo) do |task|
-  # task.patterns = %w(features/support features/step_definitions)
+  task.patterns = %w(features/support features/step_definitions)
   # only show the files with failures
   # task.formatters = ['files']
   # don't abort rake on failure

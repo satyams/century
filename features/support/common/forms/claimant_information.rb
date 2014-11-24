@@ -1,5 +1,5 @@
+# Fields to be populated on Claimant Information section
 module ClaimantInformation
-
   include PageObject
 
   text_field(:claimant_name, id: 'txtClaimantName')
@@ -19,5 +19,4 @@ module ClaimantInformation
   text_field(:claimant_employer_zip, id: 'txtEmployersZip')
   text_field(:claimant_describe_injury, id: 'txtInjuryorPropertyDescription')
   text_field(:claimant_hospital, id: 'txtHospital')
-
 end

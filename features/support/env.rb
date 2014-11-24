@@ -8,4 +8,3 @@ require_relative 'helpers/window_manager'
 World(PageObject::PageFactory)
 World(DataReader)
 World(WindowManager)
-

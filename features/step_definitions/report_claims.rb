@@ -19,7 +19,7 @@ When(/^I submit a proper "([^"]*)" claim form$/) do |claim_type|
     type = claim_type.to_s.titleize.gsub(' ', '')
     on("#{type}ClaimPage") do |page|
       page.fill_out_form_with(test_data)
-      #Ignore submit. Close window instead.
+      # Ignore submit. Close window instead.
       page.close
     end
   end
@@ -28,4 +28,3 @@ end
 Then(/^I should receive a confirmation message$/) do
   # we will ignore this for now since we don't really want to submit a claim
 end
-

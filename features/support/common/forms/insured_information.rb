@@ -1,5 +1,5 @@
+# Fields to be populated on Insured Information
 module InsuredInformation
-
   include PageObject
 
   text_field(:insured_name, id: 'txtInsName')
@@ -16,5 +16,4 @@ module InsuredInformation
   text_field(:insured_when_to_contact, id: 'txtWhentoContact')
   text_field(:insured_contact_secondary_phone, id: 'txtContactSecondaryPhone')
   text_field(:insured_where_to_contact, id: 'txtWheretoContact')
-
 end

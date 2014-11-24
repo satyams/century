@@ -27,12 +27,9 @@ at_exit do
   close_all_windows(browser)
 end
 
-
 def benchmark_runs(scenario, proc)
   if ENV['BENCHMARK']
-     time = Benchmark.realtime do
-       proc.call
-     end
+    time = Benchmark.realtime { proc.call }
     puts '------------------------------------'
     puts "Scenario: #{scenario.name}"
     puts "Took #{time.round(2)} seconds"

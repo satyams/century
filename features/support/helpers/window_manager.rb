@@ -1,4 +1,7 @@
+# Manages browser window operations
 module WindowManager
+  include UtilityFunction
+
   def on_new_window(&block)
     @browser.windows.last.use do
       @browser.window.maximize
@@ -10,21 +13,14 @@ module WindowManager
     window = nil
     browser_windows = browser.windows
     begin
-      # browser.windows.size.downto(1) do |idx|
       browser_windows.size.downto(1) do |idx|
         window = idx
-        # browser.windows[idx - 1].close unless idx==1
-        # browser.close if idx==1
-        if idx == 1
-          browser.close
-        else
-          # browser.windows[idx -  1].close
-          browser_windows[idx - 1].close
-        end
+        # return browser.close if idx == 1
+        return close_browser_session(browser) if idx == 1
+        browser_windows[idx - 1].close
       end
     rescue Exception => error
-      warn "Error deleting window # #{window}"
-      warn error.message.to_s
+      warn "Error deleting window # #{window}. #{error.message}"
     end
   end
 
@@ -34,18 +30,32 @@ module WindowManager
     begin
       browser_windows.size.downto(2) do |idx|
         window = idx
-        browser_windows[idx - 1].close unless idx==1
+        browser_windows[idx - 1].close unless idx == 1
       end
     rescue Exception => error
-      warn "Error deleting window # #{window}"
-      warn error.message.to_s
+      warn "Error deleting window # #{window}. #{error.message}"
     end
   end
 
+  def close_browser_session(browser)
+    browser.close
+  end
+
   def take_screenshot(scenario, browser)
-    screenshot = "scenario_#{scenario.name.gsub(' ','_').gsub(/[^0-9A-Za-z_]/, '')}_#{Time.new.day}#{Time.new.hour}#{Time.new.min}#{Time.new.sec}.png"
-    path_to_screenshot = "./features/results/" + screenshot
+    screenshot = "scenario_#{UtilityFunction.shot_name(scenario)}_#{UtilityFunction.shot_postfix}.png"
+    path_to_screenshot = "./features/results/#{screenshot}"
     browser.screenshot.save(path_to_screenshot)
     embed screenshot, 'image/png'
+  end
+
+  # Will store all utilities
+  class UtilityFunction
+    def self.shot_name(scenario)
+      "#{scenario.name.gsub(' ', '_').gsub(/[^0-9A-Za-z_]/, '')}"
+    end
+
+    def self.shot_postfix
+      "#{Time.new.day}#{Time.new.hour}#{Time.new.min}#{Time.new.sec}"
+    end
   end
 end

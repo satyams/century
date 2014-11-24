@@ -1,8 +1,8 @@
-#Property Claim Page
 require_relative '../common/quick_links'
 require_relative '../common/navigation_links'
 require_relative '../helpers/form_filler'
 
+# Property Claim Page
 class PropertyClaimPage
   include PageObject
   include QuickLinks
